@@ -3,6 +3,7 @@ class GameStart
     puts "じゃんけんをしましょう！"
     puts "0(グー) 1(チョキ) 2(パー) 3(戦わない)"
     puts "じゃんけんぽん！"
+    puts "-------------------------"
     
     @challenger_hand = gets.to_i
     @player_hand = rand(0..2)
@@ -17,12 +18,15 @@ class GameStart
       if @player_hand == 0
         @result = "あいこ"
         puts "相手：グー"
+        puts "-------------------------"
       elsif @player_hand == 1
         @result = "勝ち"
         puts "相手：チョキ"
+        puts "-------------------------"
       else
         @result = "負け"
         puts "相手：パー"
+        puts "-------------------------"
       end
       
     elsif @challenger_hand == 1
@@ -31,12 +35,15 @@ class GameStart
       if @player_hand == 0
         @result = "負け"
         puts "相手：グー"
+        puts "-------------------------"
       elsif @player_hand == 1
         @result = "あいこ"
         puts "相手：チョキ"
+        puts "-------------------------"
       else
         @result ="勝ち"
         puts "相手：パー"
+        puts "-------------------------"
       end
       
     elsif @challenger_hand == 2
@@ -45,12 +52,15 @@ class GameStart
       if @player_hand == 0
         @result = "勝ち"
         puts "相手：グー"
+        puts "-------------------------"
       elsif @player_hand == 1
         @result = "負け"
         puts "相手：チョキ"
+        puts "-------------------------"
       else
         @result = "あいこ"
         puts "相手：パー"
+        puts "-------------------------"
       end
       
     elsif @challenger_hand == 3
@@ -81,6 +91,7 @@ class GameStart
     puts "あっちむいてホイをしましょう！"
     puts "0(上) 1(下) 2(右) 3(左)"
     puts "あっちむいてホイ！"
+    puts "-------------------------"
     
     faces = ["上","下","右","左"]
     @challenger_select = gets.to_i
@@ -95,21 +106,26 @@ class GameStart
     elsif @result == "勝ち"
       if @challenger_select == @player_select
         puts "あなたの勝ちです！"
+        puts "-------------------------"
       else
         puts "引き分け"
+        puts "-------------------------"
         GameStart.new
       end
       
     elsif @result == "負け"
       if @challenger_select == @player_select
         puts "あなたの負けです…"
+        puts "-------------------------"
       else
         puts "引き分け"
+        puts "-------------------------"
         GameStart.new
       end
       
     else
       puts "引き分け"
+      puts "-------------------------"
       GameStart.new
     end
   end
